@@ -5,16 +5,39 @@
     <br>
     这是一个根组件
     <h1>{{ msg }}</h1>
-    <h2>我是帅哥</h2>
+    <h2>{{obj.name}}</h2>
+    <br>
+    <ul>
+      <li v-for="item in List" >
+        {{item}}
+      </li>
+    </ul>
+    <br>
+    <input type="text" v-model="msg">  
+    <button v-on:click="GetMsg()">获取表单数据</button>
+    <button v-on:click="setMsg()">设置表单数据</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app',
-  data () {
+  // 业务逻辑里面定义的数据
+  data () { 
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '你好Vue',
+      obj:{
+        name: '张三'
+      },
+      List:['111','222','333']
+    }
+  },
+  methods:{
+    GetMsg(){
+      alert(this.msg);
+    },
+    setMsg(){
+      this.msg = "设置后的数据";  
     }
   }
 }
