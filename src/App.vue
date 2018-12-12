@@ -20,6 +20,7 @@
     <div v-html="html1"></div>
     <br>
     <v-home></v-home>
+    <v-news></v-news>
   </div>
 </template>
 
@@ -30,6 +31,7 @@
   3、 在模版中使用
 */
 import Home from './components/Home.vue';
+import News from './components/News.vue';
 export default {
   name: 'app',
   // 业务逻辑里面定义的数据
@@ -43,9 +45,10 @@ export default {
       html1:'<h1>ddd</h1>',
     }
   },
-    components:{
-      'v-home': Home
-    },
+  components:{
+    'v-home': Home,
+    'v-news': News
+  },
   methods:{
     getMsg(){
       alert(this.msg);
