@@ -14,12 +14,22 @@
     </ul>
     <br>
     <input type="text" v-model="msg">  
-    <button v-on:click="GetMsg()">获取表单数据</button>
+    <button v-on:click="getMsg()">获取表单数据</button>
     <button v-on:click="setMsg()">设置表单数据</button>
+    <br>
+    <div v-html="html1"></div>
+    <br>
+    <v-home></v-home>
   </div>
 </template>
 
 <script>
+/*
+  1、 引入组件
+  2、 挂载组件
+  3、 在模版中使用
+*/
+import Home from './components/Home.vue';
 export default {
   name: 'app',
   // 业务逻辑里面定义的数据
@@ -29,11 +39,15 @@ export default {
       obj:{
         name: '张三'
       },
-      List:['111','222','333']
+      List:['111','222','333'],
+      html1:'<h1>ddd</h1>',
     }
   },
+    components:{
+      'v-home': Home
+    },
   methods:{
-    GetMsg(){
+    getMsg(){
       alert(this.msg);
     },
     setMsg(){
