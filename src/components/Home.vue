@@ -43,11 +43,6 @@ export default {
             //     // error callback
             //     console.log(error.data);
             // });
-            // Axios.get(api).then((Response) =>{
-            //     this.lst = response.body.result;
-            // }).catch((error) => {
-            //     console.log(error.data);
-            // })
 
             Axios.get(api).then((response)=>{
                     this.lst=response.data.result;
