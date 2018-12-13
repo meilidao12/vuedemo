@@ -1,9 +1,9 @@
 <template>
 <!-- 所有的内容要被根节点包含起来 -->
     <div>
-        <v-header></v-header>
+        <v-header :title="title" :run="run"></v-header>
         <br>
-        <button v-on:click="run()">获取msg</button>
+        <button v-on:click="run(123)">获取msg</button>
     </div>
 </template>
 
@@ -13,12 +13,13 @@ import Header from "./Header.vue";
 export default {
     data(){
         return{
-            msg:'我是一个首页组件'
+            msg:'我是一个首页组件',
+            title:'Header组件的标题'
         }
     },
     methods:{
-        run(){
-            alert(this.msg);
+        run(data){
+            alert(this.msg + data);
         }
     },
     components:{
