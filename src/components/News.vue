@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="News">
         <h2>这是一个新闻组件</h2>
         <ul>
             <li>111</li>
