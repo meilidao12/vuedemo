@@ -3,6 +3,7 @@
   <div id="app">
     <router-link to="/home">首页</router-link>
     <router-link to="/news">新闻</router-link>
+    <router-link to="/load">登录</router-link>
     <br>
     <hr>
     <router-view></router-view>
