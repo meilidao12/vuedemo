@@ -2,7 +2,7 @@
   <!-- Vue的模板里面 所有的内容要被一个根节点包含起来 -->
   <div id="app">
     <el-container>
-      <el-header>Header</el-header>
+      <el-header style="text-align: left;">头部</el-header>
       <el-container>
         <el-aside width="200px">
               <el-menu
@@ -11,21 +11,31 @@
                 @open="handleOpen"
                 @close="handleClose"
                 @select="handleclick"
-                router = true>
-                <el-menu-item index="/home">
-                     <i class="el-icon-menu"></i>
-                     <span slot="title">首页</span>
-                </el-menu-item>
-                <el-menu-item index="/load">
-                  <i class="el-icon-menu"></i>
-                  <span slot="title">登录</span>
-                </el-menu-item>
-                <el-menu-item index="/news"> 
-                  <i class="el-icon-menu"></i>
-                  <span slot="title">新闻</span>
-                </el-menu-item>
+                router = true
+                unique-opened = true>
+                <el-submenu index="1">
+                  <template slot="title"><i class="el-icon-menu"></i>导航一</template>
+                    <el-menu-item index="/home">
+                      <i class="el-icon-menu"></i>
+                      <span slot="title">首页</span>
+                    </el-menu-item>
+                </el-submenu>
+                <el-submenu index="2">
+                  <template slot="title"><i class="el-icon-menu"></i>导航二</template>
+                    <el-menu-item index="/load">
+                      <i class="el-icon-menu"></i>
+                      <span slot="title">登录</span>
+                    </el-menu-item>
+                </el-submenu>
+                <el-submenu index="3">
+                  <template slot="title"><i class="el-icon-menu"></i>导航三</template>
+                    <el-menu-item index="/news">
+                      <i class="el-icon-menu"></i>
+                      <span slot="title">新闻</span>
+                    </el-menu-item>
+                </el-submenu>
               </el-menu>
-        </el-aside>
+          </el-aside>
         <el-main>
           <router-view></router-view>
         </el-main>
