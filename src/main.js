@@ -2,10 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-// import VueResource from 'vue-resource';
 import VueRouter from 'vue-router'
 
-// Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 
@@ -20,8 +18,8 @@ import Load from './components/Load.vue';
 const routes = [
   { path: '/home', component: Home },
   { path: '/news', component: News },
-  {path:'/load',component:Load},
-  { path: '*', component: News }
+  { path: '/load', component: Load },
+  { path: '*', component: News } //设置默认节点
 ]
 
 //实例化路由
