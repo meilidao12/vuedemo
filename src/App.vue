@@ -9,24 +9,20 @@
                 default-active="2"
                 class="el-menu-vertical-demo"
                 @open="handleOpen"
-                @close="handleClose">
-                <el-menu-item index="1">
-                    <i class="el-icon-menu"></i>
-                    <span slot="title">
-                      <router-link to="/news">新闻</router-link>
-                    </span>
+                @close="handleClose"
+                @select="handleclick"
+                router = true>
+                <el-menu-item index="/home">
+                     <i class="el-icon-menu"></i>
+                     <span slot="title">首页</span>
                 </el-menu-item>
-                <el-menu-item index="2">
+                <el-menu-item index="/load">
                   <i class="el-icon-menu"></i>
-                  <span slot="title">
-                    <router-link to="/load">登录</router-link>
-                  </span>
+                  <span slot="title">登录</span>
                 </el-menu-item>
-                <el-menu-item index="3">
+                <el-menu-item index="/news"> 
                   <i class="el-icon-menu"></i>
-                  <span slot="title">
-                    <router-link to="/home">首页</router-link>
-                  </span>
+                  <span slot="title">新闻</span>
                 </el-menu-item>
               </el-menu>
         </el-aside>
@@ -60,12 +56,7 @@ export default {
     }
   },
    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
+
     }
 }
 </script>
@@ -104,4 +95,14 @@ export default {
   .el-container:nth-child(7) .el-aside {
     line-height: 320px;
   }
+
+  .router-link-active {
+    text-decoration: none;
+  }
+
+  a:link{
+    text-decoration: none;
+  }
+  
 </style>
+

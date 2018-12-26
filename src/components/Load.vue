@@ -1,6 +1,7 @@
 <template>
 <!-- 所有的内容要被根节点包含起来 -->
     <div id="Load">
+        <h2>登录</h2>
         <input type="text" v-model="name" placeholder="登录"></input>
         <button @click="Load()">登录</button>
     </div>
