@@ -19,7 +19,7 @@ const routes = [
   { path: '/home', component: Home },
   { path: '/news', component: News },
   { path: '/load', component: Load },
-  { path: '*', component: News } //设置默认节点
+  { path: '*', component: Load } //设置默认节点
 ]
 
 //实例化路由
