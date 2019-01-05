@@ -45,8 +45,6 @@
   </div>
 </template>
 
-
-
 <script>
 export default {
   name: 'app',
@@ -82,6 +80,5 @@ export default {
   .el-aside {
     color: #333;
   }
-  
 </style>
 
