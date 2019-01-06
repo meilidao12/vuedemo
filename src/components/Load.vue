@@ -17,15 +17,16 @@ export default {
     },
     methods:{
         Load:function(){
-            alert(this.name);
-            var api = 'http://localhost:7008/';
-            Axios.get(api)
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+            // alert(this.name);
+            // var api = 'http://localhost:7008/';
+            // Axios.get(api)
+            // .then(function (response) {
+            //     console.log(response);
+            // })
+            // .catch(function (error) {
+            //     console.log(error);
+            // });
+            this.$router.push({path:"/Home"})
         }
     }
 }

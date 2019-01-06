@@ -11,19 +11,26 @@ Vue.use(ElementUI);
 import Home from './components/Home.vue';
 import News from './components/News.vue';
 import Load from './components/Load.vue';
-
-
+import Page1 from './components/Page1.vue';
+import Page2 from './components/Page2.vue';
 
 //配置路由
 const routes = [
-  { path: '/home', component: Home },
-  { path: '/news', component: News },
+  { path: '/home', 
+    component: Home,
+    children:[
+      {path: '/news', component:News},
+      {path: '/page1', component:Page1},
+      {path: '/page2', component:Page2}
+    ]
+  },
   { path: '/load', component: Load },
   { path: '*', component: Load } //设置默认节点
 ]
 
 //实例化路由
 const router = new VueRouter({
+  mode : "history",
   routes // short for `routes: routes`
 })
 
