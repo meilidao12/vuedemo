@@ -1,7 +1,7 @@
 <template>
   <!-- Vue的模板里面 所有的内容要被一个根节点包含起来 -->
   <div id="app">
-     <el-container>
+     <!-- <el-container>
       <el-header style="text-align: left;">头部</el-header>
       <el-container>
         <el-aside width="200px">
@@ -40,7 +40,8 @@
           <router-view></router-view>
         </el-main>
       </el-container>
-    </el-container> 
+    </el-container>  -->
+    <router-view></router-view>
   </div>
 </template>
 
