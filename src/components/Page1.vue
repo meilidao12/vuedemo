@@ -5,18 +5,18 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     methods:{
-        getHub:function(){
-            axios.get('/user?ID=12345')
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        }
     },
-    amount
+    mounted:function(){
+        axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 }
 </script>
