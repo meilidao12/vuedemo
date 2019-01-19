@@ -2,7 +2,8 @@
 <!-- 所有的内容要被根节点包含起来 -->
     <div id="Load">
         <h2>登录</h2>
-        <input type="text" v-model="name" placeholder="登录"></input>
+        <input type="text" v-model="username" placeholder="登录"></input>
+        <input type="text" v-model="password" placeholder="密码"></input>
         <button @click="Load()">登录</button>
     </div>
 </template>
@@ -12,12 +13,17 @@ import Axios from 'axios';
 export default {
     data:{
         retrun:{
-           name: '卧槽尼玛'
+           username: '',
+           password: ''
         } 
     },
     methods:{
-        Load:function(){
-            // alert(this.name);
+        Load:function()
+        {
+            if(this.isEmpty(this.password) || this.isEmpty(this.username))
+            {
+                return;
+            }
             // var api = 'http://localhost:7008/';
             // Axios.get(api)
             // .then(function (response) {
@@ -26,8 +32,19 @@ export default {
             // .catch(function (error) {
             //     console.log(error);
             // });
-            this.$router.push({path:"/Home"})
-        }
+            this.$router.push({path:"/Home"});
+        },
+        isEmpty:function(obj)
+        {
+            if(typeof obj == "undefined" || obj == null || obj == "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        },
     }
 }
 </script>
