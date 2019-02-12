@@ -19,7 +19,7 @@ export default {
       return {
         data2:[
             {
-                id: 1,
+                id: 1 ,
                 label: '一级 1',
                 children: [{
                     id: 4,

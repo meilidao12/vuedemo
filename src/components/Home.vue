@@ -34,6 +34,13 @@
                       <span slot="title">页面二</span>
                     </el-menu-item>
                 </el-submenu>
+                <el-submenu index="4">
+                  <template slot="title"><i class="el-icon-menu"></i>导航四</template>
+                    <el-menu-item index="/page3">
+                      <i class="el-icon-menu"></i>
+                      <span slot="title">页面三</span>
+                    </el-menu-item>
+                </el-submenu>
               </el-menu>
           </el-aside>
         <el-main>
